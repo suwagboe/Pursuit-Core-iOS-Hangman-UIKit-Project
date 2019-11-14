@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--CreateWordViewController-->
+        <!--Zombie Hangman-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="WordEntryViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
@@ -28,9 +28,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3V-Q7-bVe">
-                                <rect key="frame" x="47" y="216" width="320" height="101.5"/>
-                                <string key="text">WELCOME TO ZOMBIE HANGMAN!!!! PLAYER1 will enter in a word and PLAYER2 will have the chance to guess what word it is!! Below player1 should enter the word</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3V-Q7-bVe">
+                                <rect key="frame" x="47" y="268" width="320" height="20.5"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -53,8 +52,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="CreateWordViewController" id="cnM-d2-f2t"/>
+                    <navigationItem key="navigationItem" title="Zombie Hangman" id="cnM-d2-f2t"/>
                     <connections>
+                        <outlet property="TextField" destination="ftv-qY-Duw" id="uJL-af-8PF"/>
+                        <outlet property="TextLabel" destination="j3V-Q7-bVe" id="rAh-4x-48G"/>
+                        <outlet property="confirmationButton" destination="2V4-Ju-K0V" id="Grf-qZ-yyT"/>
                         <segue destination="BHQ-pT-h5B" kind="show" id="bzE-dN-HDz"/>
                     </connections>
                 </viewController>
@@ -83,8 +85,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VgH-J0-C2H" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9fN-0a-0bg">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="9fN-0a-0bg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
