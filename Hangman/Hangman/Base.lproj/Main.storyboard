@@ -54,8 +54,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Zombie Hangman" id="cnM-d2-f2t"/>
                     <connections>
-                        <outlet property="TextField" destination="ftv-qY-Duw" id="uJL-af-8PF"/>
                         <outlet property="TextLabel" destination="j3V-Q7-bVe" id="rAh-4x-48G"/>
+                        <outlet property="WordTextField" destination="ftv-qY-Duw" id="uJL-af-8PF"/>
                         <outlet property="confirmationButton" destination="2V4-Ju-K0V" id="Grf-qZ-yyT"/>
                         <segue destination="BHQ-pT-h5B" kind="show" id="bzE-dN-HDz"/>
                     </connections>
