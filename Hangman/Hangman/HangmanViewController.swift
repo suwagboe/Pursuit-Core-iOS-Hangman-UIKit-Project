@@ -8,7 +8,8 @@
 
 import UIKit
 
-class HangmanViewController: UIViewController {
+class HangmanViewController: UIViewController{
+   
 
     // MARK: OUTLETS AND PROPERTIES
  
@@ -39,7 +40,7 @@ class HangmanViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        guessTextField.delegate = self as! UITextFieldDelegate
-        let amountOfSpaces = String(Array(String(repeatElement("_ ", count: theActualWord?.count ?? 3))))
+        let amountOfSpaces = String(Array(String(repeatElement("_", count: theActualWord?.count ?? 3))))
         graveYardUnderScoresLabel.text = String(amountOfSpaces)
 print(amountOfSpaces)
         
