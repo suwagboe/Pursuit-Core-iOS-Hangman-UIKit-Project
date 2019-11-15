@@ -30,12 +30,18 @@ class HangmanViewController: UIViewController {
     //the amount of turns left to play
     @IBOutlet weak var turnsLeftLabel: UILabel!
     
+    // why does this work?
+    //saying that it is empty.. empty is nil ... nil is technically a value
     var theActualWord: String?
+    
+    // variable to hold the amount of spaces
     
     override func viewDidLoad() {
         super.viewDidLoad()
 //        guessTextField.delegate = self as! UITextFieldDelegate
-    
+        let amountOfSpaces = (String(repeatElement("_", count: theActualWord?.count ?? 1)))
+        guessTextField.text = String(amountOfSpaces)
+print(amountOfSpaces)
         
     }
     
@@ -58,7 +64,19 @@ extension HangmanViewController: UITextFieldDelegate{
                             return true
     }
     
-    te
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        
+        if actualWordLabel.text?.contains(string) ?? false {
+           print("this might be workkng!!!")
+            
+            
+            //actualWordLabel
+        }
+        
+       return true
+    }
     
     
     

@@ -24,7 +24,8 @@ class WordEntryViewController: UIViewController {
     
     var theWord: String! {
         didSet {
-            //
+            // if nothing gets passed through here then the value remains emtpy
+           theWord = WordTextField.text
         }
     }
     
@@ -33,7 +34,7 @@ class WordEntryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         TextLabel.text = "WELCOME TO ZOMBIE HANGMAN!!!! PLAYER1 will enter in a word and PLAYER2 will have the chance to guess what word it is!! Below player1 should enter the word"
-        theWord = WordTextField.text
+//        theWord = WordTextField.text
         WordTextField.delegate = self
     }
     
@@ -62,6 +63,8 @@ extension WordEntryViewController: UITextFieldDelegate {
         print("isEditing")
         
      //   let myString = "abcdefghijklmnopqrstuvwxyz"
+        
+        
         return true
     }
     
@@ -72,14 +75,29 @@ extension WordEntryViewController: UITextFieldDelegate {
               let isBackSpace = strcmp(char, "\\b")
         
         // would like to add that it should be -- && (string.count < 7) included
-        if !letterBank.contains(string) && !(isBackSpace == -92){
-            TextLabel.text = "please!!!! enter in a word that is at least 7 letter"
+        if !letterBank.contains(string) && (!(isBackSpace == -92)){
+            TextLabel.text = "please!!!! enter in a word. That is only letters"
             textField.textColor = .red
+          //  confirmationButton.setTitleColor(.red, for: .normal)
+           // confirmationButton.isEnabled = false
+            confirmationButton.isHidden = true
             return false
-        } else {
+        }
+//        else if string.count < 7 {
+//            TextLabel.text = "please!!!! enter in a word that is at least 7 letter"
+//              textField.textColor = .red
+//            //  confirmationButton.setTitleColor(.red, for: .normal)
+//             // confirmationButton.isEnabled = false
+//              confirmationButton.isHidden = true
+//            return false
+//        }
+        else {
             textField.textColor = .green
             TextLabel.text = " If you are all done click the button below"
-            confirmationButton.tintColor = .green
+           // confirmationButton.setTitleColor(.red, for: .normal)
+            confirmationButton.isHidden = false
+            confirmationButton.isEnabled = true
+            
             return true
         }
     }
@@ -87,8 +105,14 @@ extension WordEntryViewController: UITextFieldDelegate {
 func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     //}
     // returns BOOL
+    
+    if WordTextField.text?.count ?? 2 < 7 {
+        textField.textColor = .red
+        textField.text = "Please input a word greater than 7 letter"
+    } else {
+        textField.textColor = .green
     WordTextField.resignFirstResponder()
- 
+    }
     //cancels out the keyboard.
     
     //want for the text
