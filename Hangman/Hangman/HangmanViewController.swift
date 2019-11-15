@@ -35,17 +35,32 @@ class HangmanViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        guessTextField.delegate = self as! UITextFieldDelegate
-        
     
         
     }
     
     // MARK: ACTIONS MAKE IMPACTS
 
+     func checkingAnswer() {
+        if guessTextField.text == actualWordLabel.text {
+               print("it worrks")
+               graveYardUnderScoresLabel.text = "You got it right!!! If you want to play again please click the correspoding button"
+           }
+       }
     
     
 }
 
-extension UITextFieldDelegate{
+extension HangmanViewController: UITextFieldDelegate{
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        print("isediting")
+                            return true
+    }
+    
+    te
+    
+    
+    
     
 }
