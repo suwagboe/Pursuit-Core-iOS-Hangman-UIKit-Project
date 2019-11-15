@@ -17,11 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2V4-Ju-K0V">
-                                <rect key="frame" x="57" y="595" width="300" height="34"/>
+                                <rect key="frame" x="74.5" y="595" width="265" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Please click me once youre done">
-                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="BHQ-pT-h5B" kind="show" id="Xcp-lb-hro"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="PLAYONE PLEASE ENTER THE WORD HERE" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ftv-qY-Duw">
                                 <rect key="frame" x="25" y="491" width="364" height="34"/>
@@ -29,7 +32,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j3V-Q7-bVe">
-                                <rect key="frame" x="47" y="268" width="320" height="20.5"/>
+                                <rect key="frame" x="204.5" y="268" width="5" height="20.5"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -37,17 +40,13 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ftv-qY-Duw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="3NS-Rr-Mny"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ftv-qY-Duw" secondAttribute="trailing" constant="25" id="47t-xQ-3DP"/>
                             <constraint firstItem="j3V-Q7-bVe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="128" id="7jy-vJ-3Xy"/>
+                            <constraint firstItem="2V4-Ju-K0V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AU3-2q-7WK"/>
                             <constraint firstItem="ftv-qY-Duw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="E3f-0o-M2O"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2V4-Ju-K0V" secondAttribute="trailing" constant="57" id="Hy2-4G-xSX"/>
                             <constraint firstItem="2V4-Ju-K0V" firstAttribute="top" secondItem="ftv-qY-Duw" secondAttribute="bottom" constant="70" id="L7z-R5-UyH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j3V-Q7-bVe" secondAttribute="trailing" constant="47" id="PP3-KO-pMr"/>
-                            <constraint firstItem="2V4-Ju-K0V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="SmU-lm-P3m"/>
-                            <constraint firstItem="j3V-Q7-bVe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ajn-Jh-CJf"/>
+                            <constraint firstItem="ftv-qY-Duw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="brU-lF-iRj"/>
+                            <constraint firstItem="j3V-Q7-bVe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hil-Rp-cIb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2V4-Ju-K0V" secondAttribute="bottom" constant="233" id="nze-IK-fKE"/>
-                            <constraint firstItem="j3V-Q7-bVe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="47" id="tld-8K-0YD"/>
                             <constraint firstItem="2V4-Ju-K0V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="whp-lL-87M"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -57,50 +56,84 @@
                         <outlet property="TextLabel" destination="j3V-Q7-bVe" id="rAh-4x-48G"/>
                         <outlet property="WordTextField" destination="ftv-qY-Duw" id="uJL-af-8PF"/>
                         <outlet property="confirmationButton" destination="2V4-Ju-K0V" id="Grf-qZ-yyT"/>
-                        <segue destination="BHQ-pT-h5B" kind="show" id="bzE-dN-HDz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="852.17391304347836" y="109.82142857142857"/>
         </scene>
-        <!--Confirms Word View Controller-->
+        <!--Hangman View Controller-->
         <scene sceneID="7Uv-uy-Sl5">
             <objects>
-                <viewController id="BHQ-pT-h5B" customClass="ConfirmsWordViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="CeW-68-fMF">
+                <viewController storyboardIdentifier="HangmanViewController" id="BHQ-pT-h5B" customClass="HangmanViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="hangma" id="CeW-68-fMF" customClass="hang">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter in a guess letter here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9pE-1m-r93">
-                                <rect key="frame" x="104" y="560" width="207" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter in a guess letter here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9pE-1m-r93">
+                                <rect key="frame" x="106.5" y="534" width="201" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gg1-Pa-ZqS">
-                                <rect key="frame" x="20" y="193" width="374" height="281"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ThewordThatitis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWS-R5-SMf">
-                                <rect key="frame" x="145" y="719" width="125" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The letters entered" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLs-qp-OWR">
+                                <rect key="frame" x="134" y="669" width="146" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Grave holders for the amount of spaces of the word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLs-qp-OWR">
-                                <rect key="frame" x="10" y="660" width="394" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9aK-lZ-hKF">
+                                <rect key="frame" x="20" y="140" width="374" height="293"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grave holders for the amount of spaces of the word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIB-uh-kLC">
+                                <rect key="frame" x="10" y="493" width="394" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="how many times are left" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ce-ZP-I0f">
+                                <rect key="frame" x="116" y="720" width="182" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ThewordThatitis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWS-R5-SMf">
+                                <rect key="frame" x="144.5" y="608" width="125" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9aK-lZ-hKF" firstAttribute="top" secondItem="WQg-U5-tA9" secondAttribute="top" id="1El-dH-g4P"/>
+                            <constraint firstItem="9aK-lZ-hKF" firstAttribute="leading" secondItem="WQg-U5-tA9" secondAttribute="leading" constant="20" id="3pt-CQ-UDJ"/>
+                            <constraint firstItem="MLs-qp-OWR" firstAttribute="top" secondItem="VWS-R5-SMf" secondAttribute="bottom" constant="40" id="49S-FZ-yjs"/>
+                            <constraint firstItem="WQg-U5-tA9" firstAttribute="trailing" secondItem="9aK-lZ-hKF" secondAttribute="trailing" constant="20" id="7sN-hM-YqO"/>
+                            <constraint firstItem="UIB-uh-kLC" firstAttribute="top" secondItem="9aK-lZ-hKF" secondAttribute="bottom" constant="60" id="CHh-v2-YNt"/>
+                            <constraint firstItem="1Ce-ZP-I0f" firstAttribute="centerX" secondItem="CeW-68-fMF" secondAttribute="centerX" id="EE3-zz-rMD"/>
+                            <constraint firstItem="VWS-R5-SMf" firstAttribute="centerX" secondItem="CeW-68-fMF" secondAttribute="centerX" id="F54-rG-q8g"/>
+                            <constraint firstItem="VWS-R5-SMf" firstAttribute="top" secondItem="9pE-1m-r93" secondAttribute="bottom" constant="40" id="Nfh-uk-Y2d"/>
+                            <constraint firstItem="9pE-1m-r93" firstAttribute="centerX" secondItem="CeW-68-fMF" secondAttribute="centerX" id="PHK-8Q-NY9"/>
+                            <constraint firstItem="UIB-uh-kLC" firstAttribute="centerX" secondItem="CeW-68-fMF" secondAttribute="centerX" id="Y2G-rd-9AC"/>
+                            <constraint firstItem="MLs-qp-OWR" firstAttribute="centerX" secondItem="CeW-68-fMF" secondAttribute="centerX" id="f3V-My-sS2"/>
+                            <constraint firstItem="9aK-lZ-hKF" firstAttribute="top" secondItem="WQg-U5-tA9" secondAttribute="top" id="mv2-vs-a75"/>
+                            <constraint firstItem="9pE-1m-r93" firstAttribute="top" secondItem="UIB-uh-kLC" secondAttribute="bottom" constant="20" id="nHl-n6-JBz"/>
+                            <constraint firstItem="1Ce-ZP-I0f" firstAttribute="centerX" secondItem="CeW-68-fMF" secondAttribute="centerX" id="pUW-6V-ooL"/>
+                            <constraint firstItem="UIB-uh-kLC" firstAttribute="centerX" secondItem="CeW-68-fMF" secondAttribute="centerX" id="sfC-9j-xdQ"/>
+                            <constraint firstItem="WQg-U5-tA9" firstAttribute="bottom" secondItem="1Ce-ZP-I0f" secondAttribute="bottom" constant="121" id="spQ-OX-iP5"/>
+                            <constraint firstItem="1Ce-ZP-I0f" firstAttribute="top" secondItem="MLs-qp-OWR" secondAttribute="bottom" constant="30" id="wgL-g7-1gM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="WQg-U5-tA9"/>
                     </view>
                     <navigationItem key="navigationItem" id="7g6-2O-D5Q"/>
+                    <connections>
+                        <outlet property="actualWordLabel" destination="VWS-R5-SMf" id="Ygj-Vb-iOr"/>
+                        <outlet property="graveYardUnderScoresLabel" destination="UIB-uh-kLC" id="BDN-Ub-aVo"/>
+                        <outlet property="guessTextField" destination="9pE-1m-r93" id="2BW-rf-BQZ"/>
+                        <outlet property="hangmanImageView" destination="9aK-lZ-hKF" id="TiS-WH-Dyd"/>
+                        <outlet property="lettersUsedLabel" destination="MLs-qp-OWR" id="lhe-Py-Vrl"/>
+                        <outlet property="turnsLeftLabel" destination="1Ce-ZP-I0f" id="hn3-2N-AfR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cgV-X0-LQG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

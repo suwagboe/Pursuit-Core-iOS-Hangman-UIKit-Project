@@ -22,16 +22,31 @@ class WordEntryViewController: UIViewController {
     
     var letterBank = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
     
+    var theWord: String! {
+        didSet {
+            //
+        }
+    }
+    
+    
     // opening actions
     override func viewDidLoad() {
         super.viewDidLoad()
         TextLabel.text = "WELCOME TO ZOMBIE HANGMAN!!!! PLAYER1 will enter in a word and PLAYER2 will have the chance to guess what word it is!! Below player1 should enter the word"
-        
+        theWord = WordTextField.text
         WordTextField.delegate = self
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         print("prepare(for segue:)")
+        
+        guard let HangmanViewController = segue.destination as? HangmanViewController else {
+            return
+        }
+        
+HangmanViewController.theActualWord = theWord
+        
     }
     
     //MARK: Actions and functions make impacts
@@ -46,7 +61,7 @@ extension WordEntryViewController: UITextFieldDelegate {
         //if they want start typing in number and other things then it stops working
         print("isEditing")
         
-        let myString = "abcdefghijklmnopqrstuvwxyz"
+     //   let myString = "abcdefghijklmnopqrstuvwxyz"
         return true
     }
     

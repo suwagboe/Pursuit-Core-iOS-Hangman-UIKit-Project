@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3C56E6D4237DF93500FBD117 /* ConfirmsWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C56E6D3237DF93500FBD117 /* ConfirmsWordViewController.swift */; };
+		3C56E6D4237DF93500FBD117 /* HangmanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C56E6D3237DF93500FBD117 /* HangmanViewController.swift */; };
 		57FCB5F421A36D3D00163B8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCB5F321A36D3D00163B8E /* AppDelegate.swift */; };
 		57FCB5F621A36D3D00163B8E /* WordEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FCB5F521A36D3D00163B8E /* WordEntryViewController.swift */; };
 		57FCB5F921A36D3D00163B8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57FCB5F721A36D3D00163B8E /* Main.storyboard */; };
@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3C56E6D3237DF93500FBD117 /* ConfirmsWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmsWordViewController.swift; sourceTree = "<group>"; };
+		3C56E6D3237DF93500FBD117 /* HangmanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HangmanViewController.swift; sourceTree = "<group>"; };
 		57FCB5F021A36D3D00163B8E /* Hangman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hangman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57FCB5F321A36D3D00163B8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57FCB5F521A36D3D00163B8E /* WordEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordEntryViewController.swift; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 				57FCB5F321A36D3D00163B8E /* AppDelegate.swift */,
 				57FCB5F721A36D3D00163B8E /* Main.storyboard */,
 				57FCB5F521A36D3D00163B8E /* WordEntryViewController.swift */,
-				3C56E6D3237DF93500FBD117 /* ConfirmsWordViewController.swift */,
+				3C56E6D3237DF93500FBD117 /* HangmanViewController.swift */,
 				57FCB5FA21A36D3E00163B8E /* Assets.xcassets */,
 				57FCB5FC21A36D3E00163B8E /* LaunchScreen.storyboard */,
 				57FCB5FF21A36D3E00163B8E /* Info.plist */,
@@ -140,7 +140,7 @@
 			files = (
 				57FCB5F621A36D3D00163B8E /* WordEntryViewController.swift in Sources */,
 				57FCB5F421A36D3D00163B8E /* AppDelegate.swift in Sources */,
-				3C56E6D4237DF93500FBD117 /* ConfirmsWordViewController.swift in Sources */,
+				3C56E6D4237DF93500FBD117 /* HangmanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
