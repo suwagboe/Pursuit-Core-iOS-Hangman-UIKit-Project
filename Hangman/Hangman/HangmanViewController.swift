@@ -39,9 +39,10 @@ class HangmanViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        guessTextField.delegate = self as! UITextFieldDelegate
-        let amountOfSpaces = (String(repeatElement("_", count: theActualWord?.count ?? 1)))
-        guessTextField.text = String(amountOfSpaces)
+        let amountOfSpaces = String(Array(String(repeatElement("_ ", count: theActualWord?.count ?? 3))))
+        graveYardUnderScoresLabel.text = String(amountOfSpaces)
 print(amountOfSpaces)
+        
         
     }
     
@@ -67,12 +68,16 @@ extension HangmanViewController: UITextFieldDelegate{
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
+       // lettersUsedLabel.text = Array<string>
+        
+        
+        
         
         if actualWordLabel.text?.contains(string) ?? false {
            print("this might be workkng!!!")
             
             
-            //actualWordLabel
+            
         }
         
        return true

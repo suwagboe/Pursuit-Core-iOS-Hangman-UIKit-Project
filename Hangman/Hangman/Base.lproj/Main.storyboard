@@ -82,7 +82,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9aK-lZ-hKF">
-                                <rect key="frame" x="20" y="140" width="374" height="293"/>
+                                <rect key="frame" x="20" y="140" width="374" height="345"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grave holders for the amount of spaces of the word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIB-uh-kLC">
                                 <rect key="frame" x="10" y="493" width="394" height="21"/>
@@ -109,7 +109,7 @@
                             <constraint firstItem="9aK-lZ-hKF" firstAttribute="leading" secondItem="WQg-U5-tA9" secondAttribute="leading" constant="20" id="3pt-CQ-UDJ"/>
                             <constraint firstItem="MLs-qp-OWR" firstAttribute="top" secondItem="VWS-R5-SMf" secondAttribute="bottom" constant="40" id="49S-FZ-yjs"/>
                             <constraint firstItem="WQg-U5-tA9" firstAttribute="trailing" secondItem="9aK-lZ-hKF" secondAttribute="trailing" constant="20" id="7sN-hM-YqO"/>
-                            <constraint firstItem="UIB-uh-kLC" firstAttribute="top" secondItem="9aK-lZ-hKF" secondAttribute="bottom" constant="60" id="CHh-v2-YNt"/>
+                            <constraint firstItem="UIB-uh-kLC" firstAttribute="top" secondItem="9aK-lZ-hKF" secondAttribute="bottom" constant="8" symbolic="YES" id="CHh-v2-YNt"/>
                             <constraint firstItem="1Ce-ZP-I0f" firstAttribute="centerX" secondItem="CeW-68-fMF" secondAttribute="centerX" id="EE3-zz-rMD"/>
                             <constraint firstItem="VWS-R5-SMf" firstAttribute="centerX" secondItem="CeW-68-fMF" secondAttribute="centerX" id="F54-rG-q8g"/>
                             <constraint firstItem="VWS-R5-SMf" firstAttribute="top" secondItem="9pE-1m-r93" secondAttribute="bottom" constant="40" id="Nfh-uk-Y2d"/>

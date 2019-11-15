@@ -22,9 +22,13 @@ class WordEntryViewController: UIViewController {
     
     var letterBank = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
     
-    var theWord: String! {
+    var theWord: String? {
         didSet {
+            // the word gets an assignment and then!!!!! the didset happens... it cannot assign the value because it is a REACTIOn to the value getting assigned
+            
+            
             // if nothing gets passed through here then the value remains emtpy
+            print("i did something")
            theWord = WordTextField.text
         }
     }
@@ -46,6 +50,7 @@ class WordEntryViewController: UIViewController {
             return
         }
         
+        print(theWord)
 HangmanViewController.theActualWord = theWord
         
     }
@@ -111,6 +116,9 @@ func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.text = "Please input a word greater than 7 letter"
     } else {
         textField.textColor = .green
+        
+        // once they finish typing then it gets assigned.
+        theWord = WordTextField.text!
     WordTextField.resignFirstResponder()
     }
     //cancels out the keyboard.
