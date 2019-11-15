@@ -26,13 +26,14 @@ class WordEntryViewController: UIViewController {
         didSet {
             // the word gets an assignment and then!!!!! the didset happens... it cannot assign the value because it is a REACTIOn to the value getting assigned
             
-            
             // if nothing gets passed through here then the value remains emtpy
             print("i did something")
            theWord = WordTextField.text
         }
     }
     
+    // calling instance of class hangman to have access to the values
+    var hmgl = HangmanViewController()
     
     // opening actions
     override func viewDidLoad() {
@@ -67,13 +68,17 @@ extension WordEntryViewController: UITextFieldDelegate {
         //if they want start typing in number and other things then it stops working
         print("isEditing")
         
-     //   let myString = "abcdefghijklmnopqrstuvwxyz"
-        
-        
         return true
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        // is the textfield everything??
+        // and what is the string vs textfield in this case.
+        
+      
+  
+        
         
         // need char in order to access the values
         let char = string.cString(using: String.Encoding.utf8)!
